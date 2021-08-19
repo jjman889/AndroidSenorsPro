@@ -2,9 +2,9 @@ name: Android CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ jjman889-patch-develop ]
   pull_request:
-    branches: [ master ]
+    branches: [ jjman889-patch-develop ]
 
 jobs:
   build:
@@ -13,11 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: set up JDK 11
+    - name: set up JDK 8
       uses: actions/setup-java@v2
       with:
-        java-version: '11'
+        java-version: '8'
         distribution: 'adopt'
+
+    - name: Setup Android SDK
+      uses: android-actions/setup-android@v2
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
