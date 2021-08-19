@@ -1,4 +1,4 @@
-package com.swapnull.surrounding;
+package hades.org.sensorapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
